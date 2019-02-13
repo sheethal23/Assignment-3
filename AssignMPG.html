@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Miles per Gallon</title>
+<script type="text/javascript">
+	var miles = parseFloat(prompt("Enter number of miles: "));
+	var gallons = parseFloat(prompt("Enter gallons used: "));	
+	check = prompt("Okay or Clear Entries?");
+	if(check == "clear" )
+		{
+			alert("Miles =" +"" + "\nGallons =" +"" + "\n\nMiles_per_gallon = "+ "");
+		}
+	else
+		{
+		if (!isNaN(miles) && miles>0 && !isNaN(gallons) && gallons>0)	
+			{
+				var miles_per_gallon  = parseFloat(miles/gallons);	
+				alert("Miles =" +miles + "\nGallons =" +gallons+ "\n\nMiles_per_gallon = "+ miles_per_gallon);
+			}
+		else
+			{
+				alert("One of the entries entered are invalid.");
+			}	
+		}
+   </script>
+   </head>
+   <body>
+ </body>  
+</html>

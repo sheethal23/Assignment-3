@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Future Value Application</title>
+	<script>
+		var futureValue;
+		// get user entries 
+		var investment = prompt("Enter investment amount as xxxxx.xx"); 
+		investment = parseFloat(investment);
+		var rate = prompt("Enter interest rate as xx.x"); 
+		rate = parseFloat(rate);
+		var years = prompt("Enter number of years"); 
+		years = parseInt(years);
+		// calulate future value 
+		futureValue = investment; 
+		if (!isNaN(investment) && investment>0 && !isNaN(rate) && rate>0 && !isNaN(years) && years>0 )
+			{
+				document.write("Investment amount = " + investment); document.write(" Interest rate = " + rate); document.write(" Years = " + years + "<br>");
+				for (var i = 1; i <= years; i++ ) 
+					{
+						interest = (futureValue * rate / 100);
+						futureValue = futureValue +  interest;
+						document.write(" Years = " + i +" Interest = " + interest + " Value = " + parseInt(futureValue) + "<br>"); 
+					} 
+				document.write("<br>Future Value with Yearly Interest <br>");
+				document.write("Investment amount = " + investment); document.write(" Interest rate = " + rate); document.write(" Years = " + years);
+				document.write(" Future Value is " + parseInt(futureValue)); 
+				interestM = (futureValue * rate / 1200);
+				futureValueM = futureValue + interestM;
+				document.write("<br><br>Future Value with Monthly Interest <br>");
+				document.write("Investment amount = " + investment); document.write(" Interest rate = " + rate); document.write(" Years = " + years);
+				document.write(" Future Value is " + parseInt(futureValueM)); 
+				document.write("<br><br>Thanks for using the Future Value application.");
+			}
+		else
+			{
+				alert("Entries entered are invalid.");
+			}	
+	</script>
+</head> 
+<body>
+</body> 
+</html>
